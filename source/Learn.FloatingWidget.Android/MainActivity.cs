@@ -22,7 +22,7 @@ namespace Learn.FloatingWidget.Droid
       LoadApplication(new App(new AndroidInitializer()));
 
       // Floating Button
-      SetContentView(Resource.Layout.Main);
+      //// SetContentView(Resource.Layout.Main);
 
       StartService(new Android.Content.Intent(this, typeof(FloatingWidgetService)));
       Finish();

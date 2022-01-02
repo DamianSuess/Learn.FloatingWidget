@@ -1,7 +1,6 @@
 using System;
 using Android.App;
 using Android.Runtime;
-using Learn.FloatingWidget.Droid.Services;
 
 namespace Learn.FloatingWidget.Droid
 {

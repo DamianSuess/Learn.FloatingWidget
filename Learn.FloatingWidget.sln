@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Learn.FloatingWidget", "sou
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Learn.FloatingWidget.Android", "source\Learn.FloatingWidget.Android\Learn.FloatingWidget.Android.csproj", "{CC876076-4425-4978-A233-69EA761A55BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Learn.FloatingWidget.UWP", "source\Learn.FloatingWidget.UWP\Learn.FloatingWidget.UWP.csproj", "{7166B990-006F-4E0F-83AA-52B9CC8903DA}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A4E9077F-62CB-4E4D-826B-446315EC0752}"
 	ProjectSection(SolutionItems) = preProject
 		source\.editorconfig = source\.editorconfig
@@ -68,26 +66,6 @@ Global
 		{CC876076-4425-4978-A233-69EA761A55BB}.Release|x86.ActiveCfg = Release|Any CPU
 		{CC876076-4425-4978-A233-69EA761A55BB}.Release|x86.Build.0 = Release|Any CPU
 		{CC876076-4425-4978-A233-69EA761A55BB}.Release|x86.Deploy.0 = Release|Any CPU
-		{7166B990-006F-4E0F-83AA-52B9CC8903DA}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{7166B990-006F-4E0F-83AA-52B9CC8903DA}.Debug|ARM.ActiveCfg = Debug|ARM
-		{7166B990-006F-4E0F-83AA-52B9CC8903DA}.Debug|ARM.Build.0 = Debug|ARM
-		{7166B990-006F-4E0F-83AA-52B9CC8903DA}.Debug|ARM.Deploy.0 = Debug|ARM
-		{7166B990-006F-4E0F-83AA-52B9CC8903DA}.Debug|x64.ActiveCfg = Debug|x64
-		{7166B990-006F-4E0F-83AA-52B9CC8903DA}.Debug|x64.Build.0 = Debug|x64
-		{7166B990-006F-4E0F-83AA-52B9CC8903DA}.Debug|x64.Deploy.0 = Debug|x64
-		{7166B990-006F-4E0F-83AA-52B9CC8903DA}.Debug|x86.ActiveCfg = Debug|x86
-		{7166B990-006F-4E0F-83AA-52B9CC8903DA}.Debug|x86.Build.0 = Debug|x86
-		{7166B990-006F-4E0F-83AA-52B9CC8903DA}.Debug|x86.Deploy.0 = Debug|x86
-		{7166B990-006F-4E0F-83AA-52B9CC8903DA}.Release|Any CPU.ActiveCfg = Release|x86
-		{7166B990-006F-4E0F-83AA-52B9CC8903DA}.Release|ARM.ActiveCfg = Release|ARM
-		{7166B990-006F-4E0F-83AA-52B9CC8903DA}.Release|ARM.Build.0 = Release|ARM
-		{7166B990-006F-4E0F-83AA-52B9CC8903DA}.Release|ARM.Deploy.0 = Release|ARM
-		{7166B990-006F-4E0F-83AA-52B9CC8903DA}.Release|x64.ActiveCfg = Release|x64
-		{7166B990-006F-4E0F-83AA-52B9CC8903DA}.Release|x64.Build.0 = Release|x64
-		{7166B990-006F-4E0F-83AA-52B9CC8903DA}.Release|x64.Deploy.0 = Release|x64
-		{7166B990-006F-4E0F-83AA-52B9CC8903DA}.Release|x86.ActiveCfg = Release|x86
-		{7166B990-006F-4E0F-83AA-52B9CC8903DA}.Release|x86.Build.0 = Release|x86
-		{7166B990-006F-4E0F-83AA-52B9CC8903DA}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

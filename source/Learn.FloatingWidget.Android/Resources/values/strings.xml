@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<string name="app_name">Learn.FloatingWidget.Droid</string>
+  <string name="floatingDescription">Useless description</string>
+  <string name="Hello">Hi there!</string>
 </resources>
