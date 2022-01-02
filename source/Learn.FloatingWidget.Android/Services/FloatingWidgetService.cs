@@ -1,9 +1,11 @@
-﻿using Android.App;
+﻿using System;
+using Android.App;
 using Android.Content;
 using Android.Graphics;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
+using Android.Widget;
 
 namespace Learn.FloatingWidget.Droid.Services
 {
@@ -28,6 +30,8 @@ namespace Learn.FloatingWidget.Droid.Services
     {
       base.OnCreate();
       _floatingView = LayoutInflater.From(this).Inflate(Resource.Layout.LayoutFloatingWidget, null);
+
+      SetTouchListener();
 
       _layoutParams = new WindowManagerLayoutParams(
         ViewGroup.LayoutParams.WrapContent,
@@ -74,7 +78,7 @@ namespace Learn.FloatingWidget.Droid.Services
 
         case MotionEventActions.Move:
 
-          // Calculate the X & Y coords of the View
+          // Calculate the X & Y coordinates of the View
           _layoutParams.X = _initialX + (int)(motionEvent.RawX - _initialTouchX);
           _layoutParams.Y = _initialY + (int)(motionEvent.RawY - _initialTouchY);
 
@@ -86,6 +90,12 @@ namespace Learn.FloatingWidget.Droid.Services
       }
 
       return result;
+    }
+
+    private void SetTouchListener()
+    {
+      var container = _floatingView.FindViewById<RelativeLayout>(Resource.Id.root);
+      container.SetOnTouchListener(this);
     }
   }
 }

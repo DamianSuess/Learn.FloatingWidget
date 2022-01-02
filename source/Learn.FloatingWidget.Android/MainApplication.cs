@@ -17,10 +17,6 @@ namespace Learn.FloatingWidget.Droid
     {
       base.OnCreate();
       Xamarin.Essentials.Platform.Init(this);
-
-      SetContentView(Resource.Layout.Main);
-
-      StartService(new Android.Content.Intent(this, typeof(FloatingWidgetService)));
     }
   }
 }

@@ -1,40 +1,46 @@
 ﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
+using Learn.FloatingWidget.Droid.Services;
 using Prism;
 using Prism.Ioc;
 
 namespace Learn.FloatingWidget.Droid
 {
-    [Activity(Theme = "@style/MainTheme",
-              ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize)]
-    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+  [Activity(Theme = "@style/MainTheme",
+            ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize)]
+  public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+  {
+    protected override void OnCreate(Bundle savedInstanceState)
     {
-        protected override void OnCreate(Bundle savedInstanceState)
-        {
-            TabLayoutResource = Resource.Layout.Tabbar;
-            ToolbarResource = Resource.Layout.Toolbar;
+      TabLayoutResource = Resource.Layout.Tabbar;
+      ToolbarResource = Resource.Layout.Toolbar;
 
-            base.OnCreate(savedInstanceState);
+      base.OnCreate(savedInstanceState);
 
-            global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            LoadApplication(new App(new AndroidInitializer()));
-        }
+      global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+      LoadApplication(new App(new AndroidInitializer()));
 
-        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Android.Content.PM.Permission[] grantResults)
-        {
-            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+      // Floating Button
+      SetContentView(Resource.Layout.Main);
 
-            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-        }
+      StartService(new Android.Content.Intent(this, typeof(FloatingWidgetService)));
+      Finish();
     }
 
-    public class AndroidInitializer : IPlatformInitializer
+    public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Android.Content.PM.Permission[] grantResults)
     {
-        public void RegisterTypes(IContainerRegistry containerRegistry)
-        {
-            // Register any platform specific implementations
-        }
+      Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+
+      base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
     }
+  }
+
+  public class AndroidInitializer : IPlatformInitializer
+  {
+    public void RegisterTypes(IContainerRegistry containerRegistry)
+    {
+      // Register any platform specific implementations
+    }
+  }
 }
-
